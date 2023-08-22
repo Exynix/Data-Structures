@@ -69,9 +69,18 @@ TList NextAnagram( const TList& lst )
 
   // 8. Finish filling the stack by emptying the queue
   /** TODO #5 **/
+    while (!q.empty()) {
+    v_aux = q.front();
+    s.push(v_aux);
+    q.pop();
+  }
 
   // 9. Fill the final answer in reverse order by emptying the stack
   /** TODO #6 **/
+  while (!s.empty()){
+    res.insert(res.begin(), s.top());
+    s.pop();
+  }
 
   // 10. Return
   return( res );
@@ -82,6 +91,12 @@ template< class TList >
 unsigned long ComputeNumberOfAnagrams( const TList& lst )
 {
   /** TODO #7 **/
+  int n = lst.size(); //Guarda el tamaño de entrada
+  unsigned long numberOfAnagrams = 1;
+  for (int i = 1; i <= n; i++){ //Factorial de forma iterativa
+    numberOfAnagrams *= i;
+  }
+  return numberOfAnagrams; //Devuelve factorial del tamaño de la entrada
 }
 
 #endif // __NEXTANAGRAM__HXX__
