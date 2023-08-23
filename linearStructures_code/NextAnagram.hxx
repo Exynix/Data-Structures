@@ -23,6 +23,11 @@ TList NextAnagram( const TList& lst )
   // 1. Stack the input values
   /** TODO #1 **/
 
+  for (lIt = lst.begin(); lIt != lst.end(); lIt++){
+      s.push(*lIt);
+  }
+
+
   // 2. Try to find a pivot
   finished = false;
   v_aux = s.top( );
@@ -39,7 +44,9 @@ TList NextAnagram( const TList& lst )
     else
     {
       // 2.1 Pop value from stack and store it into 'v_aux'
-      /** TODO #2 **/ 
+      /** TODO #2 **/
+      v_aux = s.top();
+      s.pop;
 
     } // fi
 

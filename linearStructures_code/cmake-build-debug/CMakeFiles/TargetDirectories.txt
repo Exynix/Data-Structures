@@ -1,0 +1,3 @@
+C:/Users/David Barreto/Documents/University(local)/6thSemester/Data-StructuresV2/linearStructures_code/cmake-build-debug/CMakeFiles/linearStructures_code.dir
+C:/Users/David Barreto/Documents/University(local)/6thSemester/Data-StructuresV2/linearStructures_code/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/David Barreto/Documents/University(local)/6thSemester/Data-StructuresV2/linearStructures_code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
