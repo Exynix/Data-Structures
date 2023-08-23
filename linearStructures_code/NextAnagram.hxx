@@ -3,6 +3,7 @@
 
 #include <queue>
 #include <stack>
+#include <iostream>
 
 // -------------------------------------------------------------------------
 template< class TList >
@@ -46,7 +47,7 @@ TList NextAnagram( const TList& lst )
       // 2.1 Pop value from stack and store it into 'v_aux'
       /** TODO #2 **/
       v_aux = s.top();
-      s.pop;
+      s.pop();
 
     } // fi
 
@@ -60,6 +61,15 @@ TList NextAnagram( const TList& lst )
     // 3. Find a value just below pivot
     /** TODO #3 **/
 
+      v_aux = q.front(); // se hace pop antes del ciclo para evitar que sea infinito
+      q.pop();
+
+      while(v_aux < pivot){
+          q.push(v_aux);
+          v_aux = q.front();
+          q.pop();
+      }
+
     // 4. Put it into stack
     s.push( v_aux );
 
@@ -68,6 +78,16 @@ TList NextAnagram( const TList& lst )
 
     // 6. Find the value just above pivot
     /** TODO #4 **/
+
+
+      v_aux = q.front(); // se hace pop antes del ciclo para evitar que sea infinito
+      q.pop();
+
+      while(v_aux > pivot){
+          q.push(v_aux);
+          v_aux = q.front();
+          q.pop();
+      }
 
     // 7. Put it into stack
     s.push( v_aux );
